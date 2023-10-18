@@ -18,8 +18,12 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@icons/outline": ["node_modules/@heroicons/react/24/outline"],
+      "@icons/solid": ["node_modules/@heroicons/react/24/solid"],
+      "@icons/mini": ["node_modules/@heroicons/react/20/solid"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

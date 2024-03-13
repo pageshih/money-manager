@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { Cog6ToothIcon } from '@icons/solid';
+import clsx from 'clsx';
 
-const SideMenu = () => {
+const SideMenu = ({ isShow }: { isShow: boolean }) => {
   const menuList = [
     {
       title: 'Daily Cost',
@@ -13,7 +14,10 @@ const SideMenu = () => {
     },
   ];
   return (
-    <aside className="bg-white basis-[400px] pt-2 pb-4 flex flex-col justify-between">
+    <aside className={clsx('bg-white basis-[400px] pt-2 pb-4 lg:flex flex-col justify-between', {
+      'flex': isShow,
+      'hidden': !isShow
+    })}>
       <ul>
         {menuList.map(({ title, href }) => (
           <li key={href} className="py-2 px-4">
